@@ -6,5 +6,6 @@
     "w-imgbut": "/components/w-imgbut/w-imgbut"
 
 
-  }
+  },
+  "navigationBarTitleText": "书刊详情"
 }

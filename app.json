@@ -10,7 +10,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "柯德书刊",
+    "navigationBarTitleText": "书刊",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

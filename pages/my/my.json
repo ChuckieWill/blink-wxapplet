@@ -3,5 +3,6 @@
     "w-imgbut": "/components/w-imgbut/w-imgbut",
     "w-preview": "/components/w-preview/w-preview"
 
-  }
+  },
+  "navigationBarTitleText": "喜欢"
 }

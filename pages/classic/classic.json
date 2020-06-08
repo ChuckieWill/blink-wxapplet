@@ -8,5 +8,6 @@
     "w-navi": "/components/w-navi/w-navi",
     "w-imgbut": "/components/w-imgbut/w-imgbut"
 
-  }
+  },
+  "navigationBarTitleText": "期刊"
 }

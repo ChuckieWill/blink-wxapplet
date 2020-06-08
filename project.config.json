@@ -27,7 +27,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.2",
-	"appid": "",
+	"appid": "wx4585ed",
 	"projectname": "blink-wxapplet",
 	"debugOptions": {
 		"hidedInDevtools": []
