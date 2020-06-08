@@ -1,0 +1,7 @@
+<!-- 图片按钮 -->
+<button open-type="{{openType}}" 
+        bindgetuserinfo="onGotUserInfo" 
+        class="container" 
+        plain="{{true}}"> 
+        <slot name="img"></slot>
+</button>

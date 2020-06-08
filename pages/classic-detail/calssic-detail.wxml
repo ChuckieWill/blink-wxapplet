@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="header">
+    <w-epsoide class="epsoide" index="{{classic.index}}" />
+    <view class="like-container">
+      <w-like 
+      class="like"
+      bind:like="onLike" 
+      like="{{classic.like_status}}" 
+      count="{{classic.fav_nums}}" />
+      <w-imgbut openType="share" class="share-btn">
+        <image src="/images/icon/share.png" slot="img" class="share"></image>
+      </w-imgbut>
+    </view> 
+  </view>
+
+  <w-move 
+  img="{{classic.image}}" 
+  content="{{classic.content}}" 
+  hidden="{{classic.type!=100}}"/>
+  <w-music 
+  img="{{classic.image}}" 
+  content="{{classic.content}}" 
+  hidden="{{classic.type!=200}}"
+  src="{{classic.url}}"
+  title="{{classic.title}}"/>
+  <w-essay 
+  img="{{classic.image}}" 
+  content="{{classic.content}}" 
+  hidden="{{classic.type!=300}}"/>
+  
+
+</view>

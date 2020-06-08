@@ -1,0 +1,9 @@
+<!-- 首页音乐 -->
+<view class="container" hidden="{{hidden}}">
+  <image class="classic-img {{isPlaying?'rotation':''}}" src="{{img}}"></image>
+  <image class="player-img" 
+  src="{{isPlaying?pauseSrc:playSrc}}"
+  bind:tap="playChange"/>
+  <image class="tag" src="images/music@tag.png"></image>
+  <text class="content">{{content}}</text>
+</view>

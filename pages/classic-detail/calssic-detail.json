@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "w-like": "/components/w-like/w-like",
+    "w-move": "/components/classic/w-move/w-move",
+    "w-music": "/components/classic/w-music/w-music",
+    "w-essay": "/components/classic/w-essay/w-essay",
+    "w-epsoide": "/components/w-epsoide/w-epsoide",
+    "w-imgbut": "/components/w-imgbut/w-imgbut"
+  }
+}

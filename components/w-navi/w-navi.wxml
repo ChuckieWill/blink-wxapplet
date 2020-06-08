@@ -1,0 +1,6 @@
+<!-- 首页翻页组件 -->
+<view class="container">
+  <image class="icon" bind:tap="onLeft" src="{{latest?disLeftSrc:leftSrc}}"></image>
+  <text class="title">{{title}}</text>
+  <image class="icon" bind:tap="onRight" src="{{first?disRightSrc:rightSrc}}"></image>
+</view>

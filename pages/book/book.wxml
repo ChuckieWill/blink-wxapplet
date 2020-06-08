@@ -1,0 +1,19 @@
+<!-- 书单页面 -->
+<view class="container" wx:if="{{!isSearch}}">
+	<view class="header">
+		<view class="box" bind:tap="onSearch">
+			<image src="/images/icon/search.png"></image>
+			<text>搜索书籍</text>
+		</view>
+	</view>
+	<view class="sub-container">
+		<image class="head-img" src="/images/book/quality.png"></image>
+		<view class="books-container">
+			<block wx:for="{{books}}" wx:key="id">
+				<w-book book="{{item}}" showLike="{{true}}"/>
+			</block>
+		</view>
+	</view>
+</view>
+
+<w-search wx:if="{{isSearch}}" bind:cancle="onCancle" isMore="{{isMore}}"/>

@@ -1,0 +1,10 @@
+<!-- 期刊组件 -->
+
+<view class="container" bind:tap="onTap">
+    <view class="like-container"> 
+        <w-tag comment="{{type}}" tag-class="tag"/>
+        <w-like like="{{classic.like_status}}" count="{{classic.fav_nums}}" class="like" noChange="{{true}}"/>
+    </view>
+    <image src="{{classic.image}}" class="{{classic.type == 200 ? 'musicimg':'img'}}"></image>
+    <text class="content">{{classic.content}}</text>
+</view>

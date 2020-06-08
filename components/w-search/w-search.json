@@ -1,0 +1,9 @@
+{
+    "component": true,
+    "usingComponents": {
+        "w-book": "/components/w-book/w-book",
+        "w-tag": "/components/w-tag/w-tag",
+        "w-loading": "/components/w-loading/w-loading"
+
+    }
+}

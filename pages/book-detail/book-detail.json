@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "w-like": "/components/w-like/w-like",
+    "w-tag": "/components/w-tag/w-tag",
+    "w-mask": "/components/w-mask/w-mask",
+    "w-imgbut": "/components/w-imgbut/w-imgbut"
+
+
+  }
+}

@@ -1,0 +1,6 @@
+<!-- 评论标签 -->
+<view bind:tap="onTap" class="container tag-class">
+    <slot name="before"></slot>
+	<text>{{comment}}</text>
+    <slot name="after"></slot>
+</view>

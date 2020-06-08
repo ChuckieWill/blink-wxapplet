@@ -1,0 +1,40 @@
+<!-- 我的页面 -->
+<view class="container">
+    <view class="header" >
+        <image src="/images/my/my@bg.png" class="bgimg"></image>
+        <!-- <image src="/images/my/study.png" class="learnimg"></image> -->
+
+        <w-imgbut wx:if="{{!showAuthor}}"
+        openType="getUserInfo" 
+        bind:getuserinfo="onGotUserInfo" 
+        class="avatar-position">
+            <image src="/images/my/my.png" slot="img" class="avatar"></image>
+        </w-imgbut>
+            
+        <view wx:if="{{showAuthor}}" class="avatar-container avatar-position">
+            <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
+            <text>{{userInfo.nickName}}</text>
+        </view>
+
+        <view class="description-con">
+            <view class="about-con" >
+                <image src="/images/my/about.png" class="aboutimg"></image>
+                <text class="text">关于我们</text>
+            </view>
+            <view class="about-con">
+                <text class="likenum">{{likeCount}}</text>
+                <text class="text">喜欢的书</text>
+            </view>
+        </view>
+    </view>
+    
+
+    <view class="sub-container">
+        <image src="/images/my/like.png" class="head-img"></image>
+        <view class="like-container">
+            <block wx:for="{{likeList}}" wx:key="id">
+                <w-preview classic="{{item}}" class="preview" bind:tapping="onPreview"/>
+            </block>
+        </view>
+    </view>
+</view>

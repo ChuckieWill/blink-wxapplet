@@ -1,0 +1,135 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.header{
+    width: 750rpx;
+    height: 100rpx;
+    background-color: #fff;
+    border-bottom: 1px solid #f5f5f5;
+    border-top: 1px solid #f5f5f5;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-container{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 50px;
+    margin-left: 20rpx;
+}
+
+.icon{
+    width: 28rpx;
+    height: 28rpx;
+    margin-left: 24rpx;
+    margin-right: 16rpx;
+}
+
+.bar{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: inline-block;
+    height: 68rpx;
+    width: 500rpx;
+    font-size: 28rpx;
+}
+
+.cancle-img{
+    width: 28rpx;
+    height: 28rpx;
+    margin-right: 20rpx;
+}
+
+.cancle{
+    line-height: 68rpx;
+    width: 120rpx;
+    text-align: center;
+    display: inline-block;
+    border:none
+}
+
+.in-bar{
+    color: #999;
+}
+
+.history{
+    width: 690rpx;
+    display: flex;
+    flex-direction: column;
+    font-size: 28rpx;
+    margin:160rpx 0 20rpx 0;
+}
+
+.hot-search{
+    margin-top: 70rpx;
+}
+
+.title{
+    line-height: 30rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.chunk{
+    height: 30rpx;
+    width: 10rpx;
+    background-color: #000;
+    display: inline-block;
+    margin-right: 20rpx;
+}
+
+.tags{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 24rpx;
+    padding-left: 30rpx;
+    width: 630rpx;
+}
+
+.tags w-tag{
+    margin-bottom: 20rpx;
+    margin-right: 20rpx;
+}
+
+.books-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10rpx;
+    flex-wrap: wrap;
+    padding: 0 90rpx;
+    justify-content: space-between;
+    margin-top: 100rpx;
+}
+
+.books-container w-book{
+    margin-bottom: 25rpx;
+}
+
+.empty-tip {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+}
+
+.loading {
+    margin: 50rpx 0 50rpx 0;
+}
+
+.loading-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
