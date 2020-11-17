@@ -1,0 +1,23 @@
+{
+  "name": "blink-wxapplet",
+  "version": "1.0.0",
+  "description": "* prject.config.json下设置appid",
+  "main": "app.js",
+  "dependencies": {
+    "js-base64": "^3.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChuckieWill/blink-wxapplet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChuckieWill/blink-wxapplet/issues"
+  },
+  "homepage": "https://github.com/ChuckieWill/blink-wxapplet#readme"
+}

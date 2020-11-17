@@ -1,4 +1,7 @@
+import {Base64} from 'js-base64'
 import {config} from '../config.js'
+import {Token} from './token.js'
+
 
 const tips = {
     1: '抱歉，出现了一个错误',
@@ -7,7 +10,8 @@ const tips = {
 }
 
 class HTTP{
-    request(params){
+    request(params, noRefetch=false){
+        console.log(config.api_base_url + params.url)
         // 参数params{url, data, method,}
         if(!params.method){
             params.method="GET"
@@ -17,8 +21,10 @@ class HTTP{
             method:params.method,
             data:params.data,
             header:{
-                'content-type':'application/json',
-                'appkey':config.appkey
+                // 'content-type':'application/json',
+                // 'appkey':config.appkey
+                Authorization: this._encode()
+
             },
             success:(res)=>{
                 let code = res.statusCode.toString()
@@ -26,8 +32,17 @@ class HTTP{
                      params.success && params.success(res.data)
                 }
                 else{
-                    let error_code = res.data.error_code
-                    this._show_error(error_code)
+                    if(code == '403'){
+                        //token过期
+                        if(!noRefetch){
+                            //重新获取token
+                            this._refetch(params)
+                        }
+                    }else{
+                        //返回token验证失败
+                        let error_code = res.data.error_code
+                        this._show_error(error_code)
+                    }
                 }
             },
             fail:(err)=>{
@@ -48,6 +63,23 @@ class HTTP{
             icon:'none',
             duration:2000
         }) 
+    }
+
+    //刷新token，并二次重发
+    _refetch(params){
+        let token = new Token()
+        //刷新token
+        token.getTokenFromServer().then((token) => {
+            //二次重发
+            this.request(params, true)
+        })
+    }
+
+    //给token进行base64加密
+    _encode() {
+        const token = wx.getStorageSync('token')
+        const base64 = Base64.encode(token + ":")
+        return 'Basic ' + base64
     }
 
 
